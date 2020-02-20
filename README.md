@@ -9,3 +9,5 @@ My changes to the project are: the dynamic height of the GFUserInfoVC using pref
 My changes are not refactored and not clean. Working on it.
 
 <img src="./img/iPhoneSEScrolledToBottom.png" title="*"/> | <img src="./img/UserInfoWithLongBio.png" title="*"/>
+
+![iPhoneSE](/img/iPhoneSEScrolledToBottom.png) | ![iPhone](/img/UserInfoWithLongBio.png)
