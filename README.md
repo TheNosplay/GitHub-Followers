@@ -16,7 +16,7 @@ Short User Biography             |  Long User Biography
 
 > The code I used
 
-The code to calculate the height of a UILabel. Found this on https://stackoverflow.com/questions/25180443/adjust-uilabel-height-to-text -automatic! [StackOverflow](https://stackoverflow.com/questions/25180443/adjust-uilabel-height-to-text)
+The code to calculate the height of a UILabel. Found this on [StackOverflow](https://stackoverflow.com/questions/25180443/adjust-uilabel-height-to-text)
 
 ```swift
 static func heightForUILabel(text:String, font:UIFont, width:CGFloat) -> CGFloat{
