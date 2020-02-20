@@ -8,9 +8,8 @@ The user of the app has the possibility to save GitHub users local on their devi
 My changes to the project are: the dynamic height of the GFUserInfoVC using preferredContentSize and the dynamic apating ScrollView height in the UserInfoVC. 
 
 ## Sneak Peak
-Short User Biography             |  Long User Biography
-:-------------------------:|:-------------------------:
-![](./img/ShowCase.gif)  |  ![](./img/AutoSizingHeaderHieght.gif)
+
+<img source="./img/ShowCase.gif" widht="500" height="1000">
 
 20.02.2020
 My changes are not refactored and not clean. Working on it.
