@@ -8,4 +8,4 @@ My changes to the project are: the dynamic height of the GFUserInfoVC using pref
 20.02.2020
 My changes are not refactored and not clean. Working on it.
 
-![](Bildschirmfoto 2020-02-19 um 22.18.33.png)
+![](Bildschirmfoto_2020-02-19_um_22.18.33.png)
