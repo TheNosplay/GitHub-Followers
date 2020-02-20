@@ -10,4 +10,4 @@ My changes are not refactored and not clean. Working on it.
 
 > Images
 
-<img src="./img/UserInfoWithLongBio.png width= "250" height= "400">
+<img src="./img/UserInfoWithLongBio.png" width= "250" height= "400">
