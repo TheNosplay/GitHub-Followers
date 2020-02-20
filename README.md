@@ -14,7 +14,7 @@ My changes to the project are: the dynamic height of the GFUserInfoVC using pref
 20.02.2020
 My changes are not refactored and not clean. Working on it.
 
-> Images
+## Images
 
 Short User Biography             |  Long User Biography
 :-------------------------:|:-------------------------:
