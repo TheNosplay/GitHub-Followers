@@ -8,4 +8,4 @@ My changes to the project are: the dynamic height of the GFUserInfoVC using pref
 20.02.2020
 My changes are not refactored and not clean. Working on it.
 
-<img src="./img/iPhoneSEScrolledToBottom.png" title="*"/>
+<img src="./img/iPhoneSEScrolledToBottom.png" title="*"/> | <img src="./img/UserInfoWithLongBio.png" title="*"/>
