@@ -18,7 +18,7 @@ Short User Biography             |  Long User Biography
 
 At first I calculated the height of the the bioLabel when the ViewController is beeing initialised.
 
-´´´
+```
 func updateLabelFrameSizes(){
         let widthLabelsRight : CGFloat = view.frame.width - padding - avatarImageViewHeight - textImagePadding
         bioLabelFrameHeight = UIHelper.heightForUILabel(text: user.bio ?? "No Bio available", font: UIFont.preferredFont(forTextStyle: .body), width: view.frame.width - 40)
@@ -27,14 +27,12 @@ func updateLabelFrameSizes(){
         locationLabelFrameHeight = UIHelper.heightForUILabel(text: user.location ?? "GitHub" , font: nameLabel.font!, width: (widthLabelsRight - 5))
     }
     
-´´´
+```
 
-After that I calculated the preferredContentSize.
+After that I calculated the ```preferredContentSize```.
 
-'''
-
+```
 func updatePrefferedFrameSize(){
         preferredContentSize = CGSize(width: view.frame.width, height: avatarImageViewHeight + textImagePadding + padding + bioLabelFrameHeight)
     }
-    
-'''
+```
