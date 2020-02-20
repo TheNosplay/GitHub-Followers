@@ -10,7 +10,7 @@ My changes to the project are: the dynamic height of the GFUserInfoVC using pref
 ## Sneak Peak
 Short User Biography             |  Long User Biography
 :-------------------------:|:-------------------------:
-![](./img/UserInfoWithShortBio.png)  |  ![](./img/AutoSizingHeaderHieght.gif)
+![](./img/ShowCase.gif)  |  ![](./img/AutoSizingHeaderHieght.gif)
 
 20.02.2020
 My changes are not refactored and not clean. Working on it.
