@@ -9,7 +9,7 @@ My changes to the project are: the dynamic height of the GFUserInfoVC using pref
 
 ## Sneak Peak
 
-<img source="/img/ShowCase.gif" widht="250" height="500">
+<img src="/img/ShowCase.gif" widht="250" height="500">
 
 20.02.2020
 My changes are not refactored and not clean. Working on it.
