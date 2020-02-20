@@ -31,7 +31,8 @@ static func heightForUILabel(text:String, font:UIFont, width:CGFloat) -> CGFloat
 }
 ```
 
-At first I calculated the height of the the bioLabel when the ViewController is beeing initialised. (The hardcoded numbers are the padding used for the layout)
+At first I calculated the height of the the bioLabel when the ViewController is beeing initialised. 
+_(The hardcoded numbers are the padding used for the layout)_
 
 ```swift
 func updateLabelFrameSizes(){
