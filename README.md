@@ -16,6 +16,21 @@ Short User Biography             |  Long User Biography
 
 > The code I used
 
+The code to calculate the height of a UILabel:
+
+```
+static func heightForUILabel(text:String, font:UIFont, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = text
+
+        label.sizeToFit()
+        return label.frame.height
+}
+```
+
 At first I calculated the height of the the bioLabel when the ViewController is beeing initialised.
 
 ```
