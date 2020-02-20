@@ -8,4 +8,4 @@ My changes to the project are: the dynamic height of the GFUserInfoVC using pref
 20.02.2020
 My changes are not refactored and not clean. Working on it.
 
-![Demo Dynamic HeaderView](https://giphy.com/gifs/QWLYHd2T4m3VBwIXeC)]()
+![Demo Dynamic HeaderView](https://media.giphy.com/media/QWLYHd2T4m3VBwIXeC/source.mov)]()
