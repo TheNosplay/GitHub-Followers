@@ -62,9 +62,10 @@ class GFUserInfoHeaderVC: UIViewController {
     func updateLabelFrameSizes(){
         let widthLabelsRight : CGFloat = view.frame.width - padding - avatarImageViewHeight - textImagePadding
         bioLabelFrameHeight = UIHelper.heightForUILabel(text: user.bio ?? "No Bio available", font: UIFont.preferredFont(forTextStyle: .body), width: view.frame.width - 40)
-        nameLabelFrameHeight = UIHelper.heightForUILabel(text: user.name!, font: nameLabel.font!, width: widthLabelsRight)
+
+        nameLabelFrameHeight = UIHelper.heightForUILabel(text: user.name ?? "", font: nameLabel.font!, width: widthLabelsRight)
         usernameLabelFrameHeight = UIHelper.heightForUILabel(text: user.login, font: nameLabel.font!, width: widthLabelsRight)
-        locationLabelFrameHeight = UIHelper.heightForUILabel(text: user.location!, font: nameLabel.font!, width: (widthLabelsRight - 5))
+        locationLabelFrameHeight = UIHelper.heightForUILabel(text: user.location ?? "GitHub" , font: nameLabel.font!, width: (widthLabelsRight - 5))
     }
     
     func updatePrefferedFrameSize(){
@@ -77,7 +78,7 @@ class GFUserInfoHeaderVC: UIViewController {
         nameLabel.text = user.name ?? ""
         locationLabel.text = user.location ?? "GitHub"
         bioLabel.text = user.bio ?? "No Bio available"
-        bioLabel.numberOfLines = 4
+        bioLabel.numberOfLines = 0
         bioLabelFrameHeight = UIHelper.heightForUILabel(text: user.bio ?? "No Bio available", font: UIFont.preferredFont(forTextStyle: .body), width: view.frame.width - padding * 2)
         
         locationImageView.image = SFSymbols.location

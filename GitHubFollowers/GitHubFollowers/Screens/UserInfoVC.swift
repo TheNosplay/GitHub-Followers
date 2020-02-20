@@ -22,7 +22,7 @@ class UserInfoVC: GFDataLoadingVCViewController {
     let dateLabel = GFBodyLabel(textAlignment: .center)
     var itemViews: [UIView] = []
     
-    var headerViewHeight : CGFloat?
+    var headerViewHeight : CGFloat = 90
     
     var username : String!
     weak var delegate : UserInfoVCDelegate!
@@ -30,9 +30,9 @@ class UserInfoVC: GFDataLoadingVCViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
+        layoutUI()
         configureScrollView()
         getUserInfo()
-        layoutUI()
     }
     
     func configureScrollView(){
@@ -42,12 +42,16 @@ class UserInfoVC: GFDataLoadingVCViewController {
         scrollView.pinToEdges(of: view)
         contentView.pinToEdges(of: scrollView)
         
-        let contentHeight : CGFloat
+        var contentHeight : CGFloat
         
         if DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed{
-            contentHeight = view.frame.size.height + 44
+            contentHeight = 280 + 69 + 44 + 100
         }else{
-            contentHeight = view.frame.size.height
+            contentHeight = 0
+            for itemView in itemViews{
+                contentHeight = contentHeight + itemView.frame.height
+            }
+            contentHeight = contentHeight + 3 * 20
         }
 
         NSLayoutConstraint.activate([
@@ -83,6 +87,10 @@ class UserInfoVC: GFDataLoadingVCViewController {
         self.add(childVC: GFRepoItemVC(user: user, delegate: self), to: self.itemViewOne)
         self.add(childVC: GFFollowerVC(user: user, delegate: self), to: self.itemViewTwo)
         self.dateLabel.text = "GitHub since " + user.createdAt.converteToMonthYearFormat()
+        
+        var contentHeight : CGFloat = 0
+        contentHeight =  140*2 + 50 + 80 + headerViewHeight
+        scrollView.contentSize = CGSize(width: view.frame.width, height: contentHeight)
     }
     
     func layoutUI() {
@@ -103,7 +111,6 @@ class UserInfoVC: GFDataLoadingVCViewController {
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
-            //headerView.heightAnchor.constraint(equalToConstant: 230),
     
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
@@ -122,14 +129,12 @@ class UserInfoVC: GFDataLoadingVCViewController {
         childVC.view.frame = containerView.bounds
         childVC.didMove(toParent: self)
         childVC.view.updateConstraints()
-        print(childVC.preferredContentSize.height)
         
         if containerView === headerView{
             containerView.updateConstraints()
             containerView.heightAnchor.constraint(equalToConstant: childVC.preferredContentSize.height).isActive = true
+            headerViewHeight = childVC.preferredContentSize.height
         }
-        
-        print(childVC.view.frame.height)
     }
     
     @objc func dismissVC(){
