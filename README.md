@@ -10,8 +10,31 @@ My changes are not refactored and not clean. Working on it.
 
 > Images
 
-<img src="./img/UserInfoWithLongBio.png" width=  height= "400">
-
 Short User Biography             |  Long User Biography
 :-------------------------:|:-------------------------:
 ![](./img/UserInfoWithShortBio.png)  |  ![](./img/UserInfoWithLongBio.png)
+
+> The code I used
+
+At first I calculated the height of the the bioLabel when the ViewController is beeing initialised.
+
+´´´
+func updateLabelFrameSizes(){
+        let widthLabelsRight : CGFloat = view.frame.width - padding - avatarImageViewHeight - textImagePadding
+        bioLabelFrameHeight = UIHelper.heightForUILabel(text: user.bio ?? "No Bio available", font: UIFont.preferredFont(forTextStyle: .body), width: view.frame.width - 40)
+        nameLabelFrameHeight = UIHelper.heightForUILabel(text: user.name ?? "", font: nameLabel.font!, width: widthLabelsRight)
+        usernameLabelFrameHeight = UIHelper.heightForUILabel(text: user.login, font: nameLabel.font!, width: widthLabelsRight)
+        locationLabelFrameHeight = UIHelper.heightForUILabel(text: user.location ?? "GitHub" , font: nameLabel.font!, width: (widthLabelsRight - 5))
+    }
+    
+´´´
+
+After that I calculated the preferredContentSize.
+
+'''
+
+func updatePrefferedFrameSize(){
+        preferredContentSize = CGSize(width: view.frame.width, height: avatarImageViewHeight + textImagePadding + padding + bioLabelFrameHeight)
+    }
+    
+'''
