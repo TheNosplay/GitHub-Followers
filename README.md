@@ -12,6 +12,6 @@ My changes are not refactored and not clean. Working on it.
 
 <img src="./img/UserInfoWithLongBio.png" width=  height= "400">
 
-olarized dark             |  Solarized Ocean
+Short User Biography             |  Long User Biography
 :-------------------------:|:-------------------------:
-![](./img/UserInfoWithLongBio.png)  |  ![](./img/UserInfoWithLongBio.png)
+![](./img/UserInfoWithShortBio.png)  |  ![](./img/UserInfoWithLongBio.png)
