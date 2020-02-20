@@ -20,7 +20,7 @@ Short User Biography             |  Long User Biography
 :-------------------------:|:-------------------------:
 ![](./img/UserInfoWithShortBio.png)  |  ![](./img/UserInfoWithLongBio.png)
 
-> The code I used
+## The code I used
 
 The code to calculate the height of a UILabel. Found this on [StackOverflow](https://stackoverflow.com/questions/25180443/adjust-uilabel-height-to-text)
 
