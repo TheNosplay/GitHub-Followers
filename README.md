@@ -9,9 +9,9 @@ The user can also safe users and accsess their follower. After the app closes th
 **!!This is not my code. The base project is from @[Sean Allen](https://github.com/SAllen0400)!!**
 
 **My changes to the project are:**
-- the dynamic height of the GFUserInfoVC using preferredContentSize and the dynamic apating ScrollView height in the UserInfoVC. 
+- the dynamic height of the GFUserInfoVC using preferredContentSize and the dynamic apating ScrollView height in the UserInfoVC. ![->](https://github.com/TheNosplay/takehomeproject/blob/master/README.md#dynamic-height) 
 - diffrent flow of the favourites screen: When the user tapps on a favourited user it first shows the UserInfoVC and then he can choose to look at the followers etc.
-- the FollowerListVC loads all of the followers, to be able to search trough all of them
+- the FollowerListVC loads all of the followers, to be able to search trough all of them. ![->](https://github.com/TheNosplay/takehomeproject/blob/master/README.md#loading-all-follower-at-once)
 
 **Disclaimer**
 I am not a professional developer and I am still learning! Feel free to send me your ideas to my approach😉.
