@@ -2,14 +2,17 @@
 
 ## The Project
 
-This project is based on the course of @[Sean Allen](https://github.com/SAllen0400). It is an app that pulls the followers of an user from GitHub and displays them in a CollectioView. The Data is managed through a DiffableDateScource, which allows an animated search functionallity. When tapping on a cell, anew screen opens and displays the user information. This contains the users loginname, name, location and their biography. Furthermore it shows the public repos gists and the users number of followers and following. The screen has two buttons. One of them displays the GitHub profile in a SafariView and the other button shows a collectionView of the users followers.
-The user of the app has the possibility to save GitHub users local on their device. These get displayed in a TableView. 
+This project is based on the course of @[Sean Allen](https://github.com/SAllen0400). The user can enter a GitHub username and the app displayes the followers of this GitHub user. It shows the profile picture of the follower and its loginname.
+With a tap on a follower the app displays the users information: repos, gists, the number of followers and the number of people the user is following. The user can visit the profile of the user on GitHub in the Webbrowser inside the app itselt. To look through the followers of the user, the user of the app can press a button and the app displays them in the same way as before.
+The user can also safe users and accsess their follower. After the app closes these saved users will not be deleted.
 
-My changes to the project are: the dynamic height of the GFUserInfoVC using preferredContentSize and the dynamic apating ScrollView height in the UserInfoVC. 
+My changes to the project are: 
+- the dynamic height of the GFUserInfoVC using preferredContentSize and the dynamic apating ScrollView height in the UserInfoVC. 
+- diffrent flow of the favourites screen: When the user tapps on a favourited user it first shows the UserInfoVC and then he can choose to look at the followers etc.
+- the FollowerListVC loads all of the followers, to be able to search trough all of them
 
 ## Sneak Peak
 
-<img src="/img/ShowCase.gif" widht="250" height="500">
 
 20.02.2020
 My changes are not refactored and not clean. Working on it.
