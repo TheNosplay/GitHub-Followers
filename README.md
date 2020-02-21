@@ -22,6 +22,7 @@ The user can also safe users and accsess their follower. After the app closes th
 
 The code to calculate the height of a UILabel. Found this on [StackOverflow](https://stackoverflow.com/questions/25180443/adjust-uilabel-height-to-text)
 
+*UIHelper extension*
 ```swift
 static func heightForUILabel(text:String, font:UIFont, width:CGFloat) -> CGFloat{
         let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
@@ -34,7 +35,7 @@ static func heightForUILabel(text:String, font:UIFont, width:CGFloat) -> CGFloat
         return label.frame.height
 }
 ```
-
+*GFHeaderInfo extension*
 At first I calculated the height of the the bioLabel when the ViewController is beeing initialised. 
 _(The hardcoded numbers are the padding used for the layout)_
 
@@ -56,6 +57,66 @@ func updatePrefferedFrameSize(){
         preferredContentSize = CGSize(width: view.frame.width, height: avatarImageViewHeight + textImagePadding + padding + bioLabelFrameHeight)
 }
 ```
+
+*UserInfoVC extension*
+_(The hardcoded numbers are the padding used for the layout)_
+
+First give the scrollview an initial height and adjust it in the function configureUIElemts
+
+```swift
+func configureScrollView(){
+        view.addSubviews(scrollView)
+        scrollView.addSubviews(contentView)
+        
+        scrollView.pinToEdges(of: view)
+        contentView.pinToEdges(of: scrollView)
+        
+        var contentHeight : CGFloat
+        
+        if DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed{
+            contentHeight = 280 + 69 + 44 + 100
+        }else{
+            contentHeight = view.frame.height
+        }
+
+        NSLayoutConstraint.activate([
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.heightAnchor.constraint(equalToConstant: contentHeight)
+        ])
+    }
+```
+
+_(The hardcoded numbers are the padding used for the layout)_
+```swift
+func configureUIElements(with user: User){
+        self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
+        self.add(childVC: GFRepoItemVC(user: user, delegate: self), to: self.itemViewOne)
+        self.add(childVC: GFFollowerVC(user: user, delegate: self), to: self.itemViewTwo)
+        self.dateLabel.text = "GitHub since " + user.createdAt.converteToMonthYearFormat()
+        
+        var contentHeight : CGFloat = 0
+        contentHeight =  140*2 + 50 + 80 + headerViewHeight
+        scrollView.contentSize = CGSize(width: view.frame.width, height: contentHeight)
+    }
+
+```
+
+Only adjust the height of the container if it is a headerView
+```swift
+func add(childVC: UIViewController, to containerView: UIView){
+        addChild(childVC)
+        containerView.addSubview(childVC.view)
+        childVC.view.frame = containerView.bounds
+        childVC.didMove(toParent: self)
+        
+        if containerView === headerView{
+            containerView.updateConstraints()
+            containerView.heightAnchor.constraint(equalToConstant: childVC.preferredContentSize.height).isActive = true
+            headerViewHeight = childVC.preferredContentSize.height
+        }
+    }
+```
+
 ### Images of dynamic height
 
 Short User Biography             |  Long User Biography
