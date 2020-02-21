@@ -13,6 +13,9 @@ The user can also safe users and accsess their follower. After the app closes th
 - diffrent flow of the favourites screen: When the user tapps on a favourited user it first shows the UserInfoVC and then he can choose to look at the followers etc.
 - the FollowerListVC loads all of the followers, to be able to search trough all of them
 
+**Disclaimer**
+I am not a professional developer and I am still learning! Feel free to send me your ideas to my approach😉.
+
 ## Sneak Peak
 <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/SearchVCScreen.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/SearchVCScreenSearching.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/FollowerVC.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/FollowerVCSearching.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/UserInfoVC.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/EmptyStateVC.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/FavouritesVC.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/FavouriteVCDeleting.png" width="30%"></img>         
 
