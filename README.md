@@ -23,9 +23,9 @@ Short User Biography             |  Long User Biography
 :-------------------------:|:-------------------------:
 ![](./img/UserInfoWithShortBio.png)  |  ![](./img/UserInfoWithLongBio.png)
 
-## The code I used
+# The code I used
 
-# Dynamic Height
+## Dynamic Height
 
 The code to calculate the height of a UILabel. Found this on [StackOverflow](https://stackoverflow.com/questions/25180443/adjust-uilabel-height-to-text)
 
@@ -64,8 +64,11 @@ func updatePrefferedFrameSize(){
 }
 ```
 
-# Loading all follower at once
+## Loading all follower at once
 I wanted to be able to search through all of the follower. With the pagination solution of @[Sean Allen](https://github.com/SAllen0400) you would have to scroll to the bottom of the collectionView till it loaded them all.
+
+### Disclaimer
+By using this approach it is very likely that you will hit the api limit of 60 requests per hour. You will need to authenticate to make use of 5000 requests per hour.
 
 So here the code:
 
