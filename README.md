@@ -16,15 +16,6 @@ The user can also safe users and accsess their follower. After the app closes th
 ## Sneak Peak
 
 
-20.02.2020
-My changes are not refactored and not clean. Working on it.
-
-## Images
-
-Short User Biography             |  Long User Biography
-:-------------------------:|:-------------------------:
-![](./img/UserInfoWithShortBio.png)  |  ![](./img/UserInfoWithLongBio.png)
-
 # The code I used
 
 ## Dynamic Height
@@ -65,6 +56,11 @@ func updatePrefferedFrameSize(){
         preferredContentSize = CGSize(width: view.frame.width, height: avatarImageViewHeight + textImagePadding + padding + bioLabelFrameHeight)
 }
 ```
+## Images of dynamic height
+
+Short User Biography             |  Long User Biography
+:-------------------------:|:-------------------------:
+![](./img/UserInfoWithShortBio.png)  |  ![](./img/UserInfoWithLongBio.png)
 
 ## Loading all follower at once
 I wanted to be able to search through all of the follower. With the pagination solution of @[Sean Allen](https://github.com/SAllen0400) you would have to scroll to the bottom of the collectionView till it loaded them all.
