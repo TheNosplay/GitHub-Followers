@@ -121,8 +121,8 @@ func add(childVC: UIViewController, to containerView: UIView){
 
 Short User Biography             |  Long User Biography
 :-------------------------:|:-------------------------:
-![](./img/UserInfoWithShortBio.png)  |  ![](./img/UserInfoWithLongBio.png)
-
+iPhone 11 Pro ![](./img/UserInfoWithShortBio.png)  |  iPhone 11 Pro ![](./img/UserInfoWithLongBio.png)
+iPhoneSE ![](./img/UserInfoWithShortBio.png)  |  iPhoneSE ![](./img/UserInfoWithLongBio.png)
 ## Loading all follower at once
 I wanted to be able to search through all of the follower. With the pagination solution of @[Sean Allen](https://github.com/SAllen0400) you would have to scroll to the bottom of the collectionView till it loaded them all.
 
