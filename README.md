@@ -56,7 +56,7 @@ func updatePrefferedFrameSize(){
         preferredContentSize = CGSize(width: view.frame.width, height: avatarImageViewHeight + textImagePadding + padding + bioLabelFrameHeight)
 }
 ```
-## Images of dynamic height
+### Images of dynamic height
 
 Short User Biography             |  Long User Biography
 :-------------------------:|:-------------------------:
