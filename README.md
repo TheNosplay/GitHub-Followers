@@ -25,6 +25,8 @@ Short User Biography             |  Long User Biography
 
 ## The code I used
 
+# Dynamic Height
+
 The code to calculate the height of a UILabel. Found this on [StackOverflow](https://stackoverflow.com/questions/25180443/adjust-uilabel-height-to-text)
 
 ```swift
@@ -60,4 +62,52 @@ After that I calculated the ```preferredContentSize```.
 func updatePrefferedFrameSize(){
         preferredContentSize = CGSize(width: view.frame.width, height: avatarImageViewHeight + textImagePadding + padding + bioLabelFrameHeight)
 }
+```
+
+# Loading all follower at once
+I wanted to be able to search through all of the follower. With the pagination solution of @[Sean Allen](https://github.com/SAllen0400) you would have to scroll to the bottom of the collectionView till it loaded them all.
+
+So here the code:
+
+```
+func getFollowers(username: String, page : Int){
+        isloadingMoreFollowers = true
+
+        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] (result) in
+            guard let self = self else{return}
+ 
+            switch result{
+            case .success(let followers):
+                self.updateUI(with: followers)
+
+            case.failure(let error):
+                self.presentGFAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "Ok")
+                print(error.localizedDescription)
+            }
+            
+            self.isloadingMoreFollowers = false
+        }
+    }
+    
+    func updateUI(with followers: [Follower]){
+        if followers.count < 100 {
+            self.hasMoreFollowers = false
+            self.isloadingMoreFollowers = false
+        }
+        self.followers.append(contentsOf: followers)
+        
+        if hasMoreFollowers{
+            page += 1
+            getFollowers(username: username, page: page)
+        }
+        if !isloadingMoreFollowers{
+            self.updateData(on: self.followers)
+        }
+        if self.followers.isEmpty{
+            let message = "This user doen't have any followers. Go follow them 😉."
+            DispatchQueue.main.async {
+                self.showEmptyStateView(with: message, in: self.view) }
+            return
+        }
+    }
 ```
