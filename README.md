@@ -69,7 +69,7 @@ I wanted to be able to search through all of the follower. With the pagination s
 
 So here the code:
 
-```
+```swift
 func getFollowers(username: String, page : Int){
         isloadingMoreFollowers = true
 
