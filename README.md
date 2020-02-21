@@ -99,6 +99,7 @@ func getFollowers(username: String, page : Int){
         if hasMoreFollowers{
             page += 1
             getFollowers(username: username, page: page)
+            self.updateData(on: self.followers)
         }
         if !isloadingMoreFollowers{
             self.updateData(on: self.followers)
