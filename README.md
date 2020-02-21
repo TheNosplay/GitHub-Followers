@@ -6,7 +6,9 @@ This project is based on the course of @[Sean Allen](https://github.com/SAllen04
 With a tap on a follower the app displays the users information: repos, gists, the number of followers and the number of people the user is following. The user can visit the profile of the user on GitHub in the Webbrowser inside the app itselt. To look through the followers of the user, the user of the app can press a button and the app displays them in the same way as before.
 The user can also safe users and accsess their follower. After the app closes these saved users will not be deleted.
 
-My changes to the project are: 
+**!!This is not my code. The base project is from @[Sean Allen](https://github.com/SAllen0400)!!**
+
+**My changes to the project are:**
 - the dynamic height of the GFUserInfoVC using preferredContentSize and the dynamic apating ScrollView height in the UserInfoVC. 
 - diffrent flow of the favourites screen: When the user tapps on a favourited user it first shows the UserInfoVC and then he can choose to look at the followers etc.
 - the FollowerListVC loads all of the followers, to be able to search trough all of them
