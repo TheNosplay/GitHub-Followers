@@ -16,7 +16,7 @@ The user can also safe users and accsess their follower. After the app closes th
 ## Sneak Peak
 <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/SearchVCScreen.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/SearchVCScreenSearching.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/FollowerVC.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/FollowerVCSearching.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/UserInfoVC.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/EmptyStateVC.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/FavouritesVC.png" width="30%"></img> <img src="https://github.com/TheNosplay/takehomeproject/blob/master/img/FavouriteVCDeleting.png" width="30%"></img>         
 
-# The code I used
+# The code I wrote
 
 ## Dynamic Height
 
